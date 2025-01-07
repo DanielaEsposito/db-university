@@ -62,5 +62,15 @@ FROM `departments`;
 8. Quanti sono gli insegnanti che non hanno un numero di telefono? (50)
 9. Inserire nella tabella degli studenti un nuovo record con i propri dati (per il campo
    degree_id, inserire un valore casuale)
+   ```sql
+   INSERT INTO `students` (degree_id,name, surname, date_of_birth,fiscal_code,enrolment_date,registration_number,email)
+   VALUES (10,'Daniela', 'Esposito', '1998-09-17', 'SPSMNL98P56A757K','2020-02-21','123456', 'emaill@example.com');
+   ```
 10. Cambiare il numero dell’ufficio del professor Pietro Rizzo in 126
 11. Eliminare dalla tabella studenti il record creato precedentemente al punto 9
+
+```SQL
+
+DELETE FROM `students`
+WHERE `degree_id`=10 AND `name` = 'Daniela' AND `surname` = 'Esposito' AND `date_of_birth`='1998-09-17' AND `fiscal_code`='SPSMNL98P56A757K' AND `enrolment_date`='2020-02-21' AND `registration_number` = '123456' AND `email`='emaill@example.com';
+```
