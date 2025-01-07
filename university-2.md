@@ -67,6 +67,13 @@ FROM `departments`;
    VALUES (10,'Daniela', 'Esposito', '1998-09-17', 'SPSMNL98P56A757K','2020-02-21','123456', 'emaill@example.com');
    ```
 10. Cambiare il numero dell’ufficio del professor Pietro Rizzo in 126
+
+```SQL
+UPDATE `teachers`
+SET `office_address` = 126
+WHERE `id`=58 AND `name` = 'Pietro' AND `surname` = 'Rizzo';
+```
+
 11. Eliminare dalla tabella studenti il record creato precedentemente al punto 9
 
 ```SQL
